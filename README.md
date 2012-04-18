@@ -1,4 +1,4 @@
 companylab
 ==========
 
-company lab is an application for corporate site 
+company lab is an application for corporate site, example
