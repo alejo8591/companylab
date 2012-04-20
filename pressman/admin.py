@@ -11,4 +11,3 @@ class PressReleaseAdmin(admin.ModelAdmin):
     
 admin.site.register(PressMan, PressManAdmin)
 admin.site.register(PressRelease, PressReleaseAdmin)
-
