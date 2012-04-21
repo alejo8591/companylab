@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pressman {{ pressman.pr_title }}</title>
-</head>
-<body>
-    <h1>{{ pressman.pr_title }}</h1>
-    <p>
-       Auhor: {{ pressman.pr_author }}<br />
-       Date: {{ pressman.pr_date_created }}<br />
-    </p>
-    <p>
-        {{ pressman.pr_body  }}
-    </p>
-</body>
-</html>
+{% extends "pressman/base.html" %}
+    {% block content %}
+        <h1>{{ pressman.pr_title }}</h1>
+        <p>
+           Auhor: {{ pressman.pr_author }}<br />
+           Date: {{ pressman.pr_date_created }}<br />
+        </p>
+        <p>
+            {{ pressman.pr_body  }}
+        </p>
+    {% endblock content %}
