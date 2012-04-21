@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pressman app</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+        #container {
+            margin: 0 auto;
+            width: 70%;
+            text-align: left;
+        }
+        #header {
+            background-color: #848484;
+            color: #fff;
+        }
+        .article{
+            color: #424242;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>CompanyLab</h1>
+        </header>
+        <article class="article">
+                {% block content %}{% endblock content %}
+            </article>
+    </div>
+</body>
+</html>
