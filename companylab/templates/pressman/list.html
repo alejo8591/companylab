@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Presman list</title>
-</head>
-<body>
-    <h1>List</h1>
-    <ul>
-        {% for pressman in pressman_list %}
-        <li>
-            <a href="../detail/{{ pressman.id }}">{{ pressman.pr_title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "pressman/base.html" %}
+    {% block title %}
+        All Press Releases
+    {% endblock title %}
+    {% block content %}
+        <h1>List</h1>
+        <ul>
+            {% for pressman in pressman_list %}
+            <li>
+                <a href="../detail/{{ pressman.id }}">{{ pressman.pr_title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
