@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} {% endblock title %}</title>
+        <style type="text/css">
+            body {
+                text-align: center;
+            }
+            #container {
+                margin: 0 auto;
+                width: 70%;
+                text-align: left;
+            }
+            #header {
+                background-color: #848484;
+                color: #fff;
+            }
+            .article{
+                color: #424242;
+            }
+            {% block extra_style %}{% endblock %}
+        </style>
+        <script> {% block extra_js %}{% endblock extra_js %} </script>
+        {% block extra_head %}{% endblock %}
+    </head>
+    <body {% spaceless %}
+           {% block extra_body %}{% endblock extra_body %}
+         {% endspaceless %}>
+         <div id="container">
+            <header id="header">
+                <h1>{% block header %}{% endblock header %}</h1>
+            </header>
+            <article class="article">
+                    {% block site_content %} {% endblock site_content %}
+            </article>
+        </div>
+    </body>
+</html>
