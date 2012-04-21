@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest Posts</title>
+</head>
+<body>
+    <h1>{{ pressman.pr_title }}</h1>
+    <p>
+        Author : {{ pressman.pr_author }}<br />
+        Date: {{ pressman.pr_date_created }}<br />
+        <a href="{{ pressman.get_absolute_url }}">View detail of Post</a>
+    </p>
+</body>
+</html>
