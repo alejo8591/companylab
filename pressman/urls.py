@@ -5,4 +5,5 @@ from pressman import views
 
 urlpatterns = patterns('',
        url(r'^detail/(?P<pid>\d+)/$', 'pressman.views.detail'),
+       url(r'^list/', 'pressman.views.pressman_list'),
 )
