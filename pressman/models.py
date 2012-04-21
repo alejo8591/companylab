@@ -19,10 +19,13 @@ class PressRelease(models.Model):
        pr_body = models.TextField(max_length=255, verbose_name='Nombre', help_text="Nombre de Autor")
        pr_author = models.ForeignKey(PressMan)
        pr_date_created = models.DateTimeField(default=datetime.now, auto_now = False, editable=False, verbose_name='Fecha de creación del articulo')
-       
-       def __unicode__(self):
-        return u'%s %s %s' %(self.pr_title, self.pr_body, self.pr_date_created)
     
        class Meta:
-        ordering = ['pr_title']
+        get_latest_by = 'pr_date_created'
         verbose_name = "Publicacione"
+        
+       def get_absolute_url(self):
+            return '/pressman/detail/%d/' % self.id
+
+       def __unicode__(self):
+            return u'%s %s %s' %(self.pr_title, self.pr_body, self.pr_date_created)
