@@ -20,5 +20,4 @@ def latest(request):
     """ Retornando info del ultimo post """
     p = PressRelease.objects.latest()
     return render_to_response('pressman/latest.html',{ 'pressman':p, },
-                              context_instance=RequestContext(request)
-)
+                              context_instance=RequestContext(request))
