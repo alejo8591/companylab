@@ -1,5 +1,8 @@
 {% extends "pressman/base.html" %}
-    {% block content %}
+{% block title %}
+   {{ block.super }}: {{ pressman.pr_title }}
+   {% endblock title %}
+       {% block content %}
         <h1>{{ pressman.pr_title }}</h1>
         <p>
            Auhor: {{ pressman.pr_author }}<br />
